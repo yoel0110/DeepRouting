@@ -36,6 +36,7 @@
    It is recommended to create a `controller.ini.php` in your controllers folder and create a route instance. For example:
 
    ```php
+   require_once("DeepRouting/controller.php");
    $router = new Router();
    ```
 
