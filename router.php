@@ -1,7 +1,7 @@
 
 <?php
-require_once("router/route.php");
-require_once("router/group.php");
+require_once("DeepRouting/route.php");
+require_once("DeepRouting/group.php");
 
 class Router {
   public $groups = array(); 
