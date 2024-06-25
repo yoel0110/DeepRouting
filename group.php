@@ -16,23 +16,23 @@ class ResourceGroup {
   }
 
   public function Post($path, $handler) {
-    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, $handler);
+    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, "POST", $handler);
   }
 
   public function Get($path, $handler) {
-    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, $handler);
+    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, "GET", $handler);
   }
 
   public function Put($path, $handler) {
-    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, $handler);
+    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, "PUT", $handler);
   }
 
   public function Delete($path, $handler) {
-    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, $handler);
+    $this->routes[$this->name][$path] = new Route($this->resourcePath."".$path, "DELETE", $handler);
   }
 
   public function NotFound($path, $handler) {
-    $this->errorRoute[$this->name][$path] = new Route($this->resourcePath."".$path, $handler);
+    $this->errorRoute[$this->name][$path] = new Route($this->resourcePath."".$path, "", $handler);
   }
 
   //Utils

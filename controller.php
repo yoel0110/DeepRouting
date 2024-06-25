@@ -28,8 +28,8 @@ class BaseController { //This class is only static because you don't need new in
       $routes =  self::$routerService->getErrorRoute();
       foreach ($routes as $route) {
         foreach($route as $s ) {
-          if($s->path != $_SERVER['REQUEST_URI'] || $s->path == $_SERVER['REQUEST_URI'] ){
-            self::$found = true;
+          if($_SERVER['REQUEST_URI'] != "/" ){
+            self::$found = false;
             $s->Call()();
           }
         }

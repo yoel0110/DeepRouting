@@ -4,13 +4,11 @@ class Route{
 
   public $path;
   private $controller;
+  private string $method;
 
-  private $method;
-
-  private $params = array();
-
-  public function __construct($path, $controller){
+  public function __construct($path, $method, $controller){
     $this->path = trim($path);
+    $this->method = trim($method);
     $this->controller = $controller;
   } 
 
